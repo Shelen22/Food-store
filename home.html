@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style1.css">
+</head>
+<body>
+     <div id="navbar"></div>
+     <div id ="searchdata"></div>
+     <div id="popular"></div>
+    
+</body>
+</html>
+<script type="module">
+    import navbar from "./component/navbar2.js";
+    import {getMeal,randomD,append} from "./script/data.js";
+
+    let navbarof = document.getElementById("navbar");
+    navbarof.innerHTML = navbar();
+
+    let response = getMeal(`https://www.themealdb.com/api/json/v1/1/filter.php?a=indian`)
+
+response.then((res) => {
+
+        let home = document.getElementById("popular");
+        // console.log('home:', home)
+
+        append(res, home);
+
+    })
+    .catch((err) => {
+        console.log('err:', err)
+
+    })
+    
+    let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+     
+        searching();
+          
+      });
+    
+
+     async function searching(){
+
+
+    let search = document.getElementById("search").value;
+    let  ser = getMeal(`https://www.themealdb.com/api/json/v1/1/search.php?f=${search}`)
+
+    ser.then((res) => {
+         // console.log('home:', home)
+
+
+        let se = document.getElementById("searchdata");
+        randomD(res,se)
+
+    })
+    .catch((err) => {
+        console.log('err:', err)
+
+    })
+
+}
+
+
+</script>

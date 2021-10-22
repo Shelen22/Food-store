@@ -1,0 +1,110 @@
+  body{
+    background:#5c432a ;
+  }
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+    border: solid 1px black;
+    background-color:#23180d;
+  }
+    
+  #options {
+    display: flex;
+    justify-content: space-between;
+  }
+  input{
+    width: 200px;
+    height: 30px;
+    margin: 2%;
+    border-radius: 8px;
+    outline: tomato;
+    box-shadow:white;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    font-weight: 250;
+  }
+
+  #options h3 {
+    color:white;
+    margin-top: 6%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #options h3:hover{
+      background-color: chocolate;
+      border-radius: 5px;
+   
+  }
+  #popular{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    /* gap: 20px; */
+    text-align: center;
+    margin-top: 2%;
+    font-size: 25px;
+  }
+  #popular img {
+    width: 70%;
+    border-radius: 6px;
+  }
+  #random{
+    text-align: center;
+    font-size: 25px;
+  }
+  #random img{
+    width: 30%;
+    height: 300px;
+    margin: 2% 15% 0%;
+    border-radius: 6px;
+  }
+  #latest{
+    display: grid;
+    grid-template-columns: repeat(2,48%);
+    column-gap: 20px; 
+    text-align: center;
+    font-size: 25px;
+    margin-left: 1%;
+    
+  }
+  #latest div:nth-child(even){
+    border-left:thick dotted #23180d;
+    border-bottom:thick dotted #23180d;
+
+  }
+  #latest div{
+    /* border-left:thick dotted #23180d; */
+    border-bottom:thick dotted #23180d;
+  }
+  button{
+    height: 35px;
+    margin-top: 2%;
+    margin-left: -6%;
+  }
+  #searchdata{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 20px;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 25px;
+    margin-left: 2%;
+
+  }
+  #searchdata img {
+    width: 50%;
+    border-radius: 6px;
+  }
+  #searchdata div:nth-child(even){
+    border-left:thick dotted #23180d;
+    border-bottom:thick dotted #23180d;
+  }
+  #searchdata div{
+    /* border-left:thick dotted #23180d; */
+    border-bottom:thick dotted #23180d;
+  }
+   
